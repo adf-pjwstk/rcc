@@ -1,0 +1,5 @@
+#!/bin/bash
+sudo apt-get update
+sudo apt-get install nginx -y
+VM_NUM=$(echo $HOSTNAME | egrep -o '[0-9]')
+sudo bash -c "echo '<html><body>This is VM $HOSTNAME <br> <h1><center>VM $VM_NUM</center></h1> </body></html>' > /var/www/html/index.html"
